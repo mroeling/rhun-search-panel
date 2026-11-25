@@ -1,6 +1,6 @@
-local/search-panel state=running pid=PID cmds=search-panel.focus,search-panel.search,search-panel.in_folder confined=1
-ctrl+alt+shift+f focus source=ext:local/search-panel rank=3 state=active
-local/search-panel.search title=Find in Files badge=0 visible chosen
+mroeling/rhun-search-panel state=running pid=PID cmds=rhun-search-panel.focus,rhun-search-panel.search,rhun-search-panel.in_folder confined=1
+ctrl+alt+shift+f focus source=ext:mroeling/rhun-search-panel rank=3 state=active
+mroeling/rhun-search-panel.search title=Find in Files badge=0 visible chosen
 at=X
 row 0 d=0 open id=f WORK/proj/root.txt label=root.txt badge=1 icon=56
 row 1 d=1 leaf id=m WORK/proj/root.txt 1 1 label=1: hello in root hl=3-8

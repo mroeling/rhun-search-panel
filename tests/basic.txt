@@ -1,10 +1,10 @@
 # Run with: rhun PROJECT --headless 1000x600 --extensions DIR --script tests/basic.txt
-# where DIR/local/search-panel holds extension.ini and bin/ (tests/run.sh sets that up).
+# where DIR/mroeling/rhun-search-panel holds extension.ini and bin/ (tests/run.sh sets that up).
 # Every print-* line's output is compared by tests/run.sh with tests/basic.expected.
 wait 100
 print-extensions
 # ctrl+alt+shift+f focuses the form (the built-in Find in Files is ctrl+shift+f)
-print-keys search-panel
+print-keys rhun-search-panel
 key ctrl+alt+shift+f
 print-side-tabs
 view-focus search

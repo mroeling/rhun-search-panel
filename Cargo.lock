@@ -52,7 +52,7 @@ version = "1.4.2"
 source = "git+https://github.com/rhun-editor/extension-protocol?tag=rust-v1.4.2#396830ce2b5295416f59d58a0599bde3aa663ba6"
 
 [[package]]
-name = "search-panel"
+name = "rhun-search-panel"
 version = "0.1.0"
 dependencies = [
  "regex",
