@@ -1,0 +1,61 @@
+# Run with: rhun PROJECT --headless 1000x600 --extensions DIR --script tests/basic.txt
+# where DIR/local/search-panel holds extension.ini and bin/ (tests/run.sh sets that up).
+# Every print-* line's output is compared by tests/run.sh with tests/basic.expected.
+wait 100
+print-extensions
+# ctrl+alt+shift+f focuses the form (the built-in Find in Files is ctrl+shift+f)
+print-keys search-panel
+key ctrl+alt+shift+f
+print-side-tabs
+view-focus search
+# Tab moves into the form's fields; Enter runs the search. Literal and case-insensitive: Hello
+# and hello both match, in the file at the top and in src/
+key Tab
+type hello
+key Return
+wait 600
+print-view 2
+# Match Case (the space toggles it), then Enter: only the lower-case hello matches; Hello is left out
+key Tab
+key Tab
+key Tab
+key space
+key shift+Tab
+key shift+Tab
+key shift+Tab
+key Return
+wait 600
+print-view 2
+# Regex: the case toggle back off, the Regex toggle on, and the pattern h.llo
+key Tab
+key Tab
+key Tab
+key space
+key Tab
+key Tab
+key space
+key shift+Tab
+key shift+Tab
+key shift+Tab
+key shift+Tab
+key shift+Tab
+key BackSpace
+key BackSpace
+key BackSpace
+key BackSpace
+key BackSpace
+type h.llo
+key Return
+wait 600
+print-view 2
+print-form search
+# Find in Folder on src/ (right-click its row in the Explorer): the files to include become src/**,
+# and the same regex search now finds nothing in root.txt
+click 40 90 right
+menu-pick Find in Folder
+view-focus search
+key Tab
+key Return
+wait 600
+print-view 2
+print-form search

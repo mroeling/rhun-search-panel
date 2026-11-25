@@ -1,0 +1,51 @@
+local/search-panel state=running pid=PID cmds=search-panel.focus,search-panel.search,search-panel.in_folder confined=1
+ctrl+alt+shift+f focus source=ext:local/search-panel rank=3 state=active
+local/search-panel.search title=Find in Files badge=0 visible chosen
+at=X
+row 0 d=0 open id=f WORK/proj/root.txt label=root.txt badge=1 icon=56
+row 1 d=1 leaf id=m WORK/proj/root.txt 1 1 label=1: hello in root hl=3-8
+row 2 d=0 open id=f WORK/proj/src/main.rs label=src/main.rs badge=2 icon=116
+row 3 d=1 leaf id=m WORK/proj/src/main.rs 2 9 label=2:     let Hello = 1; // hello hl=11-16
+row 4 d=1 leaf id=m WORK/proj/src/main.rs 2 23 label=2:     let Hello = 1; // hello hl=25-30
+row 5 d=0 open id=f WORK/proj/src/ui/x.txt label=src/ui/x.txt badge=2 icon=56
+row 6 d=1 leaf id=m WORK/proj/src/ui/x.txt 1 1 label=1: Hello there hl=3-8
+row 7 d=1 leaf id=m WORK/proj/src/ui/x.txt 2 1 label=2: hello again hl=3-8
+at=X
+row 0 d=0 open id=f WORK/proj/root.txt label=root.txt badge=1 icon=56
+row 1 d=1 leaf id=m WORK/proj/root.txt 1 1 label=1: hello in root hl=3-8
+row 2 d=0 open id=f WORK/proj/src/main.rs label=src/main.rs badge=2 icon=116
+row 3 d=1 leaf id=m WORK/proj/src/main.rs 2 9 label=2:     let Hello = 1; // hello hl=11-16
+row 4 d=1 leaf id=m WORK/proj/src/main.rs 2 23 label=2:     let Hello = 1; // hello hl=25-30
+row 5 d=0 open id=f WORK/proj/src/ui/x.txt label=src/ui/x.txt badge=2 icon=56
+row 6 d=1 leaf id=m WORK/proj/src/ui/x.txt 1 1 label=1: Hello there hl=3-8
+row 7 d=1 leaf id=m WORK/proj/src/ui/x.txt 2 1 label=2: hello again hl=3-8
+at=X
+row 0 d=0 open id=f WORK/proj/root.txt label=root.txt badge=1 icon=56
+row 1 d=1 leaf id=m WORK/proj/root.txt 1 1 label=1: hello in root hl=3-8
+row 2 d=0 open id=f WORK/proj/src/main.rs label=src/main.rs badge=2 icon=116
+row 3 d=1 leaf id=m WORK/proj/src/main.rs 2 9 label=2:     let Hello = 1; // hello hl=11-16
+row 4 d=1 leaf id=m WORK/proj/src/main.rs 2 23 label=2:     let Hello = 1; // hello hl=25-30
+row 5 d=0 open id=f WORK/proj/src/ui/x.txt label=src/ui/x.txt badge=2 icon=56
+row 6 d=1 leaf id=m WORK/proj/src/ui/x.txt 1 1 label=1: Hello there hl=3-8
+row 7 d=1 leaf id=m WORK/proj/src/ui/x.txt 2 1 label=2: hello again hl=3-8
+field query type=text row=1 seq=5 on=0 focus value=hello
+field include type=text row=2 seq=0 on=0 value=
+field exclude type=text row=3 seq=0 on=0 value=
+field case type=check row=4 seq=0 on=0 value=
+field word type=check row=4 seq=0 on=0 value=
+field regex type=check row=4 seq=0 on=0 value=
+field run type=button row=5 seq=0 on=0 value=
+at=X
+row 0 d=0 open id=f WORK/proj/src/main.rs label=src/main.rs badge=2 icon=116
+row 1 d=1 leaf id=m WORK/proj/src/main.rs 2 9 label=2:     let Hello = 1; // hello hl=11-16
+row 2 d=1 leaf id=m WORK/proj/src/main.rs 2 23 label=2:     let Hello = 1; // hello hl=25-30
+row 3 d=0 open id=f WORK/proj/src/ui/x.txt label=src/ui/x.txt badge=2 icon=56
+row 4 d=1 leaf id=m WORK/proj/src/ui/x.txt 1 1 label=1: Hello there hl=3-8
+row 5 d=1 leaf id=m WORK/proj/src/ui/x.txt 2 1 label=2: hello again hl=3-8
+field query type=text row=1 seq=5 on=0 value=hello
+field include type=text row=2 seq=0 on=0 focus value=src/**
+field exclude type=text row=3 seq=0 on=0 value=
+field case type=check row=4 seq=0 on=0 value=
+field word type=check row=4 seq=0 on=0 value=
+field regex type=check row=4 seq=0 on=0 value=
+field run type=button row=5 seq=0 on=0 value=
